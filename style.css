@@ -6,7 +6,7 @@ body {
 .header {
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }   
 
 img {
@@ -34,4 +34,43 @@ img {
     margin-left: 1.7em;
     width: 23px;
     height: 23px;
+}
+
+.upperPreferences {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.lowerPreferences {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.preferenceButton {
+    display: flex;
+    padding: 0.45em 1.4em;
+    background-color: red;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 0.6em;
+    border: none;
+}
+
+.upperPreferences .preferenceButton:nth-child(1) {
+    background-color: #34B6BF;
+}
+
+.upperPreferences .preferenceButton:nth-child(2) {
+    background-color: #D8AF0D;
+}
+
+.upperPreferences .preferenceButton:nth-child(3) {
+    background-color: #2EA035;
+}
+
+.upperPreferences .preferenceButton:nth-child(4) {
+    background-color: #2D61A6;
 }
