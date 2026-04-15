@@ -4,7 +4,6 @@ export default {
     name: "PreferenceButton",
 
     setup() {
-        return {};
     },
 
     template: `
