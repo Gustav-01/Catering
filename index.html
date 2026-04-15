@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -23,6 +23,27 @@
 
 <body>
     <div id="app">
+        <header class="header">
+            <img src="assets/logo.png" alt="logo-image" class="logo">
+            <input type="text" placeholder="Sök..." class="search">
+            <img src="assets/filter.svg" alt="filterLogo" id="filter" class="filter">
+            <img src="assets/cart.svg" alt="basket" id="cart" class="cart">
+        </header>
+        <section class="preferenceContainer">
+            <div class="upperPreferences">
+                <preference-button>Förrätt</preference-button>
+                <preference-button>Huvudrätt</preference-button>
+                <preference-button>Efterrätt</preference-button>
+                <preference-button>Buffé</preference-button>
+            </div>
+            <div class="lowerPreferences">
+                <preference-button>Asiatiskt</preference-button>
+                <preference-button>Italienskt</preference-button>
+                <preference-button>Mexikanskt</preference-button>
+                <preference-button>Svenskt</preference-button>
+                <preference-button>Anpassningsbar</preference-button>
+            </div>
+        </section>
     </div>
 </body>
 
