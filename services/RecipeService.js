@@ -1,6 +1,6 @@
 import Recipe from "./Recipe";
 
-const recipeService = {
+const RecipeService = {
     async getRecipes() {
         return [
             new Recipe( 
@@ -25,5 +25,5 @@ const recipeService = {
     }
 }
 
-export default recipeService;
+export default RecipeService;
 

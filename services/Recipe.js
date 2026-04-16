@@ -3,12 +3,13 @@
  */
 
 class Recipe {
-    constructor(title, price, imageUrl, course, mainIngredientImg, theme, modifiable) {
+    constructor(title, price, imageUrl, imageAltText, course, proteinImageUrl, theme, modifiable) {
         this.title = title;
         this.price = price;
         this.imageUrl = imageUrl;
+        this.imageAltText = imageAltText;
         this.course = course;
-        this.mainIngredientImg = mainIngredientImg;
+        this.proteinImageUrl = proteinImageUrl;
         this.theme = theme;
         this.modifiable = modifiable;
     }

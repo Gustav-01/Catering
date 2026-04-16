@@ -25,7 +25,9 @@
     <div id="app">
         <header class="header">
             <img src="assets/logo.png" alt="Catering logotyp" class="logo">
-            <input type="text" placeholder="Sök..." class="search">
+            <form @submit.prevent="loadRecipes">
+                <input type="text" placeholder="Sök..." class="search">
+            </form>
             <img src="assets/filter.svg" alt="filterLogo" id="filter" class="filter">
             <img src="assets/cart.svg" alt="basket" id="cart" class="cart">
         </header>
@@ -47,7 +49,10 @@
 
         <section class="recipes">
 
-            <div class="recipe-container">
+            <recipe-container v-for="recipe in {{ allRecipes }}" buttonTitle="knapp" buttonBackground="red"
+                :recipe="recipe"></recipe-container>
+
+            <!-- <div class="recipe-container">
                 <img src="assets/teriyaki.png" alt="Teriyaki Chicken" class="recipe-image">
 
                 <div class="recipe-content">
@@ -73,7 +78,7 @@
             </div>
 
             <div class="recipe-container"></div>
-            <div class="recipe-container"></div>
+            <div class="recipe-container"></div> -->
 
         </section>
     </div>

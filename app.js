@@ -1,13 +1,21 @@
 import { ref, createApp } from "vue";
 import PreferenceButton from "./components/PreferenceButton.js";
 import RecipeContainer from "./components/RecipeContainer.js";
+import RecipeService from "./services/RecipeService.js";
 
 const app = {
 
-//    setup() {
+    setup() {
+        const allRecipes = ref([]);
 
-//     return {}
-//    }
+        const recipeService = new RecipeService();
+
+        async function loadRecipes() {
+            allRecipes = await recipeService.getRecipes();
+        }
+
+        return { allRecipes, loadRecipes }
+    }
 };
 
 const vueApp = createApp(app);
