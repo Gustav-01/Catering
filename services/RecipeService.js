@@ -1,19 +1,29 @@
-const RecipeService = {
+import Recipe from "./Recipe";
+
+const recipeService = {
     async getRecipes() {
         return [
-            {
-                title: 'Kyckling teriyaki',
-                price: 80,
-                imageUrl: 'assest/kyckling_teriyaki.jpg',
-                course: 'Huvudrätt',
-                mainIngredientImg: 'assets/meat.svg',
-                theme: 'Asiatiskt',
-                modifiable: true,
-            }
+            new Recipe( 
+                    'Kyckling teriyaki', 
+                    80, 
+                    'assest/kyckling_teriyaki.jpg', 
+                    'Huvudrätt',
+                     'assets/meat.svg',
+                    'Asiatiskt',
+                    true
+            ),
+            new Recipe(
+                'Svamprisotto',
+                90,
+                'assets/svamprisotto.jpg',
+                'Förrätt',
+                'assets/veg.svg',
+                'Italienskt',
+                false
+            )
         ]
     }
 }
-Object.freeze(RecipeService);
 
-export default RecipeService;
+export default recipeService;
 
