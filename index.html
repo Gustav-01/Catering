@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catering</title>
 
-    <script type="importMap">
+    <script type="importmap">
         {
             "imports": {
                 "vue": "https://unpkg.com/vue@3.5.28/dist/vue.esm-browser.js"
@@ -31,18 +31,50 @@
         </header>
         <section class="preferenceContainer">
             <div class="upperPreferences">
-                <preference-button>Förrätt</preference-button>
-                <preference-button>Huvudrätt</preference-button>
-                <preference-button>Efterrätt</preference-button>
-                <preference-button>Buffé</preference-button>
+                <preference-button title="Förrätt" background="#34B6BF"></preference-button>
+                <preference-button title="Huvudrätt" background="#D8AF0D"></preference-button>
+                <preference-button title="Efterrätt" background="#2EA035"></preference-button>
+                <preference-button title="Buffé" background="#2D61A6"></preference-button>
             </div>
             <div class="lowerPreferences">
-                <preference-button>Asiatiskt</preference-button>
-                <preference-button>Italienskt</preference-button>
-                <preference-button>Mexikanskt</preference-button>
-                <preference-button>Svenskt</preference-button>
-                <preference-button>Anpassningsbar</preference-button>
+                <preference-button title="Asiatiskt" background="#651E81"></preference-button>
+                <preference-button title="Italienskt" background="#CA0000"></preference-button>
+                <preference-button title="Mexikanskt" background="#DB8F00"></preference-button>
+                <preference-button title="Svenskt" background="#E6D61F"></preference-button>
+                <preference-button title="Anpassningsbar" background="#BC0485"></preference-button>
             </div>
+        </section>
+
+        <section class="recipes">
+
+            <div class="recipe-container">
+                <img src="assets/teriyaki.png" alt="Teriyaki Chicken" class="recipe-image">
+
+                <div class="recipe-content">
+                    <h2>Kyckling teriyaki - 80 SEK pp</h2>
+
+                    <div class="recipe-tags">
+                        <div class="upper-tags">
+                            <preference-button title="Typ av måltid" background="#fff"
+                                id="typeOfCourse"></preference-button>
+                            <img src="assets/protein.svg" class="protein-icon">
+                        </div>
+                        <div class="lower-tags">
+                            <preference-button title="Asiatiskt" background="#651E81"></preference-button>
+                            <preference-button title="Anpassningsbar" background="#BC0485"></preference-button>
+                        </div>
+                    </div>
+
+                    <div class="recipe-actions">
+                        <preference-button title="Anpassa" background="#fff" id="adjust"></preference-button>
+                        <preference-button title="Lägg till" background="#35BC04"></preference-button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-container"></div>
+            <div class="recipe-container"></div>
+
         </section>
     </div>
 </body>
