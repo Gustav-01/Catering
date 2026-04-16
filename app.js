@@ -6,12 +6,12 @@ import RecipeService from "./services/RecipeService.js";
 const app = {
 
     setup() {
-        const allRecipes = ref([]);
+        let allRecipes = ref([]);
 
         const recipeService = new RecipeService();
 
         async function loadRecipes() {
-            allRecipes = await recipeService.getRecipes();
+            allRecipes.value = await recipeService.getRecipes();
         }
 
         return { allRecipes, loadRecipes }

@@ -49,7 +49,7 @@
 
         <section class="recipes">
 
-            <recipe-container v-for="recipe in {{ allRecipes }}" buttonTitle="knapp" buttonBackground="red"
+            <recipe-container v-for="recipe in allRecipes" :key="recipe.id" buttonTitle="knapp" buttonBackground="red"
                 :recipe="recipe"></recipe-container>
 
             <!-- <div class="recipe-container">

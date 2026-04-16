@@ -1,9 +1,11 @@
-import Recipe from "./Recipe";
+import Recipe from "./Recipe.js";
 
-const RecipeService = {
+class RecipeService {
+    
     async getRecipes() {
         return [
             new Recipe( 
+                    1,
                     'Kyckling teriyaki', 
                     80, 
                     'assest/kyckling_teriyaki.jpg', 
@@ -13,6 +15,7 @@ const RecipeService = {
                     true
             ),
             new Recipe(
+                2,
                 'Svamprisotto',
                 90,
                 'assets/svamprisotto.jpg',
