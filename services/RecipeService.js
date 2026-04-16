@@ -8,7 +8,7 @@ class RecipeService {
                     1,
                     'Kyckling teriyaki', 
                     80, 
-                    'assest/kyckling_teriyaki.jpg',
+                    'assets/kyckling_teriyaki.jpg',
                     'Teriyakikyckling', 
                     'Huvudrätt',
                      'assets/meat.svg',

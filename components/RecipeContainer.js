@@ -36,7 +36,7 @@ export default {
                         </div>
                         <div class="lower-tags">
                             <preference-button :title="recipe.theme" background="#651E81"></preference-button>
-                            <preference-button v-if="recipe.modifiable" :title="Anpassningsbar" background="#BC0485"></preference-button>
+                            <preference-button v-if="recipe.modifiable" title="Anpassningsbar" background="#BC0485"></preference-button>
                         </div>
                     </div>
 
