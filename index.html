@@ -17,7 +17,7 @@
         }
     </script>
 
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="app.js" type="module"></script>
 </head>
 
@@ -25,25 +25,23 @@
     <div id="app">
         <header class="header">
             <img src="assets/logo.png" alt="Catering logotyp" class="logo">
-            <form @submit.prevent="loadRecipes">
-                <input type="text" placeholder="Sök..." class="search">
-            </form>
+                <input type="text" placeholder="Sök..." class="search" @keyup.enter="searchRecipes">
             <img src="assets/filter.svg" alt="filterLogo" id="filter" class="filter">
             <img src="assets/cart.svg" alt="basket" id="cart" class="cart">
         </header>
         <section class="preferenceContainer">
             <div class="upperPreferences">
-                <preference-button title="Förrätt" background="#34B6BF"></preference-button>
-                <preference-button title="Huvudrätt" background="#D8AF0D"></preference-button>
-                <preference-button title="Efterrätt" background="#2EA035"></preference-button>
-                <preference-button title="Buffé" background="#2D61A6"></preference-button>
+                <preference-button title="Förrätt" background="#34B6BF" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Huvudrätt" background="#D8AF0D" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Efterrätt" background="#2EA035" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Buffé" background="#2D61A6" @click="preferenceRecipe"></preference-button>
             </div>
             <div class="lowerPreferences">
-                <preference-button title="Asiatiskt" background="#651E81"></preference-button>
-                <preference-button title="Italienskt" background="#CA0000"></preference-button>
-                <preference-button title="Mexikanskt" background="#DB8F00"></preference-button>
-                <preference-button title="Svenskt" background="#E6D61F"></preference-button>
-                <preference-button title="Anpassningsbar" background="#BC0485"></preference-button>
+                <preference-button title="Asiatiskt" background="#651E81" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Italienskt" background="#CA0000" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Mexikanskt" background="#DB8F00" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Svenskt" background="#E6D61F" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Anpassningsbar" background="#BC0485" @click="preferenceRecipe"></preference-button>
             </div>
         </section>
 
