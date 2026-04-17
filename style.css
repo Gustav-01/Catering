@@ -71,7 +71,7 @@ img {
     margin-top: 2em;
 }
 
-.recipe-container {
+.recipeContainer {
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
@@ -80,13 +80,13 @@ img {
     flex-direction: column;
     width: 100%;
 
-    .recipe-image {
+    img {
         width: 100%;
-        object-fit: cover;
+        object-fit:contain;
         height: auto;
     }
 
-    .recipe-content {
+    .recipeContent {
         padding: 0.5em;
         display: flex;
         flex-direction: column;
@@ -104,30 +104,30 @@ img {
         font-size: 0.65rem;
     }
 
-    .recipe-tags {
+    .recipeTags {
         display: flex;
         flex-direction: column;
         gap: 5px;
         margin-top: 5px;
     }
 
-    .upper-tags {
+    .upperTags {
         display: flex;
         align-items: center;
         gap: 10px;
     }
 
-    .protein-icon {
+    .proteinIcon {
         width: 1.1em;
         height: 1.2rem;
     }
 
-    .lower-tags {
+    .lowerTags {
         display: flex;
         gap: 15px;
     }
 
-    .recipe-actions {
+    .recipeActions {
         display: flex;
         justify-content: space-between;
         font-size: 1em;
