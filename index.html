@@ -25,7 +25,9 @@
     <div id="app">
         <header class="header">
             <img src="assets/logo.png" alt="Catering logotyp" class="logo">
-                <input type="text" placeholder="Sök..." class="search" @keyup.enter="searchRecipes">
+            <form @submit.prevent="searchRecipes">
+                <input type="text" placeholder="Sök..." class="search">
+            </form>
             <img src="assets/filter.svg" alt="filterLogo" id="filter" class="filter">
             <img src="assets/cart.svg" alt="basket" id="cart" class="cart">
         </header>
@@ -38,10 +40,13 @@
             </div>
             <div class="lowerPreferences">
                 <preference-button title="Asiatiskt" background="#651E81" @click="preferenceRecipe"></preference-button>
-                <preference-button title="Italienskt" background="#CA0000" @click="preferenceRecipe"></preference-button>
-                <preference-button title="Mexikanskt" background="#DB8F00" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Italienskt" background="#CA0000"
+                    @click="preferenceRecipe"></preference-button>
+                <preference-button title="Mexikanskt" background="#DB8F00"
+                    @click="preferenceRecipe"></preference-button>
                 <preference-button title="Svenskt" background="#E6D61F" @click="preferenceRecipe"></preference-button>
-                <preference-button title="Anpassningsbar" background="#BC0485" @click="preferenceRecipe"></preference-button>
+                <preference-button title="Anpassningsbar" background="#BC0485"
+                    @click="preferenceRecipe"></preference-button>
             </div>
         </section>
 
@@ -49,34 +54,6 @@
 
             <recipe-container v-for="recipe in allRecipes" :key="recipe.id" buttonTitle="knapp" buttonBackground="red"
                 :recipe="recipe"></recipe-container>
-
-            <!-- <div class="recipe-container">
-                <img src="assets/teriyaki.png" alt="Teriyaki Chicken" class="recipe-image">
-
-                <div class="recipe-content">
-                    <h2>Kyckling teriyaki - 80 SEK pp</h2>
-
-                    <div class="recipe-tags">
-                        <div class="upper-tags">
-                            <preference-button title="Typ av måltid" background="#fff"
-                                id="typeOfCourse"></preference-button>
-                            <img src="assets/protein.svg" class="protein-icon">
-                        </div>
-                        <div class="lower-tags">
-                            <preference-button title="Asiatiskt" background="#651E81"></preference-button>
-                            <preference-button title="Anpassningsbar" background="#BC0485"></preference-button>
-                        </div>
-                    </div>
-
-                    <div class="recipe-actions">
-                        <preference-button title="Anpassa" background="#fff" id="adjust"></preference-button>
-                        <preference-button title="Lägg till" background="#35BC04"></preference-button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="recipe-container"></div>
-            <div class="recipe-container"></div> -->
 
         </section>
     </div>
