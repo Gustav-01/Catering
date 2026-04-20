@@ -11,18 +11,39 @@ const app = {
         const recipeService = new RecipeService();
 
         async function loadRecipes() {
-            allRecipes.value = await recipeService.getRecipes();
+            try {
+                allRecipes.value = await recipeService.getRecipes();
+            }
+            catch (error) {
+                console.error('Could not retrieve recipe data: ' + error.message);
+                alert('Tjänsten har problem just nu. Var god försök igen senare.')
+                return;
+            }
         }
 
         async function searchRecipes() {
-            allRecipes.value = await recipeService.getSearchResult();
+            try {
+                allRecipes.value = await recipeService.getSearchResult();
+            }
+            catch (error) {
+                console.error('Error while performing search: ' + error.message);
+                alert('Något gick fel i sökningen. Kontrollera söktermen och försök igen.')
+                return;
+            }
         }
 
         async function preferenceRecipe() {
-            allRecipes.value = await recipeService.getPreferenceRecipe();
+            try {
+                allRecipes.value = await recipeService.getPreferenceRecipe();
+            }
+            catch (error) {
+                console.error('Error filtering recipes: ' + error.message);
+                alert('Filtreringen misslyckades. Kontakta supporten.')
+                return;
+            }
         }
 
-        onMounted( () => {
+        onMounted(() => {
             loadRecipes();
         })
 
