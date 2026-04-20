@@ -12,15 +12,6 @@ export default {
         recipe: Recipe,
     },
 
-    // title: any;
-    // price: any;
-    // imageUrl: any;
-    //imageAltText
-    // course: any;
-    // proteinImageUrl: any;
-    // theme: any;
-    // modifiable: any;
-
     template: `
         <div class="recipeContainer">
 
