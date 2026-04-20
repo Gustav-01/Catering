@@ -1,4 +1,4 @@
-import { ref, createApp } from "vue";
+import { ref, createApp, onMounted } from "vue";
 import PreferenceButton from "./components/PreferenceButton.js";
 import RecipeContainer from "./components/RecipeContainer.js";
 import RecipeService from "./services/RecipeService.js";
@@ -14,7 +14,19 @@ const app = {
             allRecipes.value = await recipeService.getRecipes();
         }
 
-        return { allRecipes, loadRecipes }
+        async function searchRecipes() {
+            allRecipes.value = await recipeService.getSearchResult();
+        }
+
+        async function preferenceRecipe() {
+            allRecipes.value = await recipeService.getPreferenceRecipe();
+        }
+
+        onMounted( () => {
+            loadRecipes();
+        })
+
+        return { allRecipes, loadRecipes, searchRecipes, preferenceRecipe }
     }
 };
 

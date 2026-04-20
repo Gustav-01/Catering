@@ -47,6 +47,9 @@ class RecipeService {
         ]
     }
 
+    async getPreferenceRecipe() {
+        return this.generateRecipes(3);
+    }
     /**
      * Helper method, generating generic mock Recipe objects to use as placeholders for where real data would go.
      * 

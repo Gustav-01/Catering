@@ -42,7 +42,7 @@ export default {
 
                     <div class="recipeActions">
                         <preference-button v-if="recipe.modifiable" title="Anpassa" background="#fff" id="adjust"></preference-button>
-                        <preference-button title="Lägg till" background="#35BC04"></preference-button>
+                        <preference-button title="Lägg till" background="#35BC04" id="add"></preference-button>
                     </div>
                 </div>
             

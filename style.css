@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-* {
-    /* border: 1px solid black; */
-}
-
 body {
     font-family: Inter;
     display: flex;
@@ -62,6 +58,11 @@ img {
     color: #fff;
     font-size: 0.6em;
     border: none;
+    cursor: pointer;
+}
+
+.preferenceButton:hover {
+    transform: translateY(-3px);
 }
 
 .recipes {
@@ -96,6 +97,8 @@ img {
         border-radius: 20px;
         font-size: 0.5em;
         padding: 0.3em 1.4em;
+        cursor: auto;
+        transform: none;
     }
 
     h2 {
@@ -138,5 +141,9 @@ img {
     #adjust {
         border: 1px solid #35BC04;
         color: #35BC04;
+    }
+
+    #add, #adjust {
+        cursor: pointer;
     }
 }
